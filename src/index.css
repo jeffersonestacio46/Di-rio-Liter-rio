@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Lora", Georgia, serif;
+  --color-sophdark: #0F1115;
+  --color-sophcard: #161920;
+  --color-sophaccent: #C5A059;
+  --color-sophaccent-hover: #d4b47a;
+  --color-sophtext: #E0E0E0;
+  --color-sophmuted: #8E929D;
+  --color-sophborder: #2B2E36;
+}
+
+/* Custom scrollbars for a cleaner UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom print styles for exporting books as a clean PDF document */
+@media print {
+  html, body, #root, .min-h-screen {
+    background: white !important;
+    background-color: white !important;
+    color: black !important;
+    height: auto !important;
+  }
+  
+  .no-print, 
+  button, 
+  form, 
+  nav, 
+  input, 
+  select, 
+  textarea,
+  .reminder-card,
+  .recs-section,
+  #chat-tab,
+  #add-book-btn,
+  #open-preferences-btn,
+  #export-csv-btn,
+  #export-pdf-btn,
+  #friends-feed-section,
+  #theme-toggle-btn {
+    display: none !important;
+  }
+  
+  /* Ensure main content takes full page print space */
+  .print-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: black !important;
+  }
+  
+  /* Show print-only title or styled list */
+  .print-only {
+    display: block !important;
+  }
+  
+  /* Format columns nicely in printed sheet */
+  .book-print-row {
+    display: block !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 16px 0 !important;
+    page-break-inside: avoid !important;
+    color: black !important;
+  }
+  
+  .book-print-cover {
+    display: none !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+/* Light Mode theme values and overrides */
+.light-mode {
+  --color-sophdark: #F3F4F6;
+  --color-sophcard: #FFFFFF;
+  --color-sophaccent: #8A6D3B; /* Tom dourado mais escuro para excelente contraste em modo claro */
+  --color-sophaccent-hover: #A07F4E;
+  --color-sophtext: #1F2937;
+  --color-sophmuted: #6B7280;
+  --color-sophborder: #E5E7EB;
+}
+
+/* Let's cover important specific dark utility classes under .light-mode */
+.light-mode .bg-sophcard {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+.light-mode .bg-zinc-950,
+.light-mode .bg-zinc-950\/40,
+.light-mode .bg-zinc-950\/60,
+.light-mode .bg-zinc-900,
+.light-mode .bg-zinc-900\/40,
+.light-mode .bg-zinc-900\/60,
+.light-mode .bg-zinc-950\/20 {
+  background-color: #F9FAFB !important;
+  border-color: #E5E7EB !important;
+}
+
+.light-mode .border-zinc-800,
+.light-mode .border-zinc-850,
+.light-mode .border-zinc-900 {
+  border-color: #E5E7EB !important;
+}
+
+.light-mode .text-zinc-300,
+.light-mode .text-zinc-400,
+.light-mode .text-zinc-500,
+.light-mode .text-zinc-650,
+.light-mode .text-zinc-350 {
+  color: #4B5563 !important;
+}
+
+.light-mode .text-white {
+  color: #111827 !important;
+}
+
+.light-mode .text-sophaccent {
+  color: #8A6D3B !important;
+}
+
+.light-mode input,
+.light-mode select,
+.light-mode textarea {
+  background-color: #FFFFFF !important;
+  border-color: #D1D5DB !important;
+  color: #111827 !important;
+}
+
+.light-mode input::placeholder,
+.light-mode textarea::placeholder {
+  color: #9CA3AF !important;
+}
+
+.light-mode .bg-zinc-805,
+.light-mode .bg-zinc-905 {
+  background-color: #E5E7EB !important;
+  color: #1F2937 !important;
+  border-color: #D1D5DB !important;
+}
+
+.light-mode .bg-zinc-805:hover,
+.light-mode .bg-zinc-905:hover {
+  background-color: #D1D5DB !important;
+}
+
+.light-mode .bg-zinc-900\/65 {
+  background-color: #F3F4F6 !important;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "Diário de Leitura e Progresso",
+  "description": "Um gerenciador completo de leitura para registrar progresso, participar de um feed interativo de amigos (curtir e comentar), estabelecer metas mensais e anuais, e receber recomendações personalizadas por IA baseadas em suas resenhas e avaliações.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
